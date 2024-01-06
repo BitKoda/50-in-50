@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+
+/* Default Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Muli", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+/* End of Default Styles */

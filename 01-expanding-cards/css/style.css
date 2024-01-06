@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+
+/* Default Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Muli", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+/* End of Default Styles */
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  width: 90vw;
+}
+
+.panel {
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 1.2rem;
+  color: white;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 1rem;
+  position: relative;
+  transition: flex 0.7s ease-in;
+}
+
+.caption {
+  display: flex;
+  position: absolute;
+  height: 10vh;
+  width: 100%;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.7);
+  padding: 1.7rem;
+  opacity: 0; 
+  border-radius: 0 0 1.2rem 1.2rem;
+}
+
+.caption h3 {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  opacity: 0; 
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active .caption, .panel.active .caption h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+} 
+
+.social-card-icons {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.social-card-icons i {
+  width: 3rem;
+  height: 3rem;
+  background-color: white;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+  font-size: 1.2rem;
+  color: #073e72;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(2rem);
+  transition: all 0.4s;
+}
+
+.panel.active:hover .social-card-icons i {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+}
