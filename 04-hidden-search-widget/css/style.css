@@ -7,7 +7,7 @@
   padding: 0;
   box-sizing: border-box;
   outline: none;
-  font-family: "Muli", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 html {
@@ -15,13 +15,53 @@ html {
 }
 
 body {
+  background-image: linear-gradient(1800deg, #999, #fff);
   font-family: 'Roboto', sans-serif;
   font-size: 1.6rem;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
   overflow: hidden;
 }
 /* End of Default Styles */
+
+.search {
+  position: relative;
+  height: 5rem;
+}
+
+.search .input {
+  background-color: white;
+  border: 0;
+  padding: 1.5rem;
+  height: 5rem;
+  width: 5rem;
+  font-size: 1.8rem;
+  transition: width 0.3s ease;
+}
+
+.btn {
+  background-color: white;
+  font-size: 2.4rem;
+  border: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5rem;
+  width: 5rem;
+  transition: transform 0.3s ease;
+}
+
+.btn:focus, .input:focus {
+  outline: none;
+}
+
+.search.active .input {
+  width: 20rem;
+}
+
+.search.active .btn {
+  transform: translateX(19.8rem);
+}
