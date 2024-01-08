@@ -4,7 +4,7 @@
 - [x] 2. Progress Steps / 6 Jan 2024
 - [x] 3. Rotating Navigation
 - [x] 4. Hidden Search Widget
-- [ ] 5. Blurry Loading
+- [x] 5. Blurry Loading
 - [ ] 6. Scroll Animation
 - [ ] 7. Split Landing Page
 - [ ] 8. Form Wave Animation
