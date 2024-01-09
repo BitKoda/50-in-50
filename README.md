@@ -6,7 +6,7 @@
 - [x] 4. Hidden Search Widget
 - [x] 5. Blurry Loading
 - [x] 6. Scroll Animation
-- [ ] 7. Split Landing Page
+- [x] 7. Split Landing Page
 - [ ] 8. Form Wave Animation
 - [ ] 9. Sound Board
 - [ ] 10. Dad Jokes
