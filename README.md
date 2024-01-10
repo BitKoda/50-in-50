@@ -8,7 +8,7 @@
 - [x] 6. Scroll Animation
 - [x] 7. Split Landing Page
 - [x] 8. Form Wave Animation
-- [ ] 9. Sound Board
+- [x] 9. Sound Board
 - [ ] 10. Dad Jokes
 - [ ] 11. Event Key Codes
 - [ ] 12. FAQ Collapse
