@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:wght@400&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+
+/* Default Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: linear-gradient(lightblue, white);
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  padding: 2rem;
+}
+/* End of Default Styles */
+
+.container {
+  background-color: lightblue;
+  border-radius: 1rem;
+  box-shadow: 0 1rem 2rem rgba(0,0,0,0.1), 0 0.6rem 0.6rem rgba(0,0,0,0.1);
+  padding: 5rem 2rem;
+  text-align: center;
+  max-width: 100%;
+  width: 80rem;
+}
+
+h3 {
+  opacity: 1;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  color: #999;
+  text-wrap: nowrap;
+}
+
+.joke {
+  font-size: 3rem;
+  letter-spacing: 0.1rem;
+  line-height: 4rem;
+  margin: 5rem auto;
+  max-width: 60rem;
+}
+
+.btn {
+  background-color: #9f68e0;
+  border: 0;
+  border-radius: 1rem;
+  box-shadow: 0 1rem 2rem rgba(0,0,0,0.1), 0 0.6rem 0.6rem rgba(0,0,0,0.1);
+  padding: 1.4rem 4rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
