@@ -10,7 +10,7 @@
 - [x] 8. Form Wave Animation
 - [x] 9. Sound Board
 - [x] 10. Dad Jokes
-- [ ] 11. Event Key Codes
+- [x] 11. Event Key Codes
 - [ ] 12. FAQ Collapse
 - [ ] 13. Random Choice Picker
 - [ ] 14. Animated Navigation
