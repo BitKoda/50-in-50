@@ -11,7 +11,7 @@
 - [x] 9. Sound Board
 - [x] 10. Dad Jokes
 - [x] 11. Event Key Codes
-- [ ] 12. FAQ Collapse
+- [x] 12. FAQ Collapse
 - [ ] 13. Random Choice Picker
 - [ ] 14. Animated Navigation
 - [ ] 15. Incrementing Counter
