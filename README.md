@@ -13,7 +13,7 @@
 - [x] 11. Event Key Codes
 - [x] 12. FAQ Collapse
 - [x] 13. Random Choice Picker
-- [ ] 14. Animated Navigation
+- [x] 14. Animated Navigation
 - [ ] 15. Incrementing Counter
 - [ ] 16. Drink Water
 - [ ] 17. Movie App
