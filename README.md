@@ -14,7 +14,7 @@
 - [x] 12. FAQ Collapse
 - [x] 13. Random Choice Picker
 - [x] 14. Animated Navigation
-- [ ] 15. Incrementing Counter
+- [x] 15. Incrementing Counter
 - [ ] 16. Drink Water
 - [ ] 17. Movie App
 - [ ] 18. Background Slider
