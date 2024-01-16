@@ -15,7 +15,7 @@
 - [x] 13. Random Choice Picker
 - [x] 14. Animated Navigation
 - [x] 15. Incrementing Counter
-- [ ] 16. Drink Water
+- [x] 16. Drink Water
 - [ ] 17. Movie App
 - [ ] 18. Background Slider
 - [ ] 19. Theme Clock
