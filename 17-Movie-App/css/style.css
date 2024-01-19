@@ -60,9 +60,10 @@ header {
   background-color: var(--primary-color);
 }
 
-main {
+main#main {
   display: flex;
   flex-wrap: wrap;
+  overflow-y: visible;
 }
 
 .movie {
@@ -126,17 +127,65 @@ main {
   transform: translateY(0);
 }
 
-.single-movie-info {
-  color: #eee;
-  display: flex;
-  flex-direction: row;
-  padding: 0.5rem 1rem 1rem;
+/* Single movie page styles */
+
+main#single-movie {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.images {
+  width: 100vw;
+}
+
+.movie-details {
+  color: white;
   letter-spacing: 0.5px;
 }
 
-.single-movie-info img {
-  width: 30%;
+.movie-details h1 {
+  position: relative;
+  margin: 0 0 1rem 0;
 }
 
-.single-movie-info h1 {
+.movie-details h1 span {
+  position: absolute;
+  font-size: 1rem;
+  border: 0.1rem solid white;
+  top: 1.5rem;
+  margin-left: 1rem;
+  padding: 0.3rem 0.5rem;
+}
+
+.images img.backdrop {
+  width: 100vw;
+  opacity: 0.5;
+  position: relative;
+}
+
+.images img.poster {
+  position: absolute;
+  top: 8rem;
+  left: 2rem;
+  width: 20rem;
+
+}
+
+.movie-details {
+  position: absolute;
+  top: 8rem;
+  margin-left: 24rem;
+}
+
+.movie-details p {
+  margin: 1rem 0;
+}
+
+.movie-details a {
+  color: white;
+}
+
+.movie-details h3 {
+  margin: 2rem 0;
 }

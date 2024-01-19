@@ -3,22 +3,20 @@ const DISCOVER = 'discover/movie'
 const SORT_ORDER = '?sort_by=popularity.desc'
 const API_KEY = '&api_key=2dba80bdc6afe446e856bcf71a6140ef'
 const NUM_PAGES = '&page=1'
+const APPEND_TO_RES = '&append_to_response=release_dates'
 // Image path
 const IMG_PATH = "https://image.tmdb.org/t/p/w500"
 
-
-// 753342?language=en-US 
-
-
 // Routes
 const MOVIES_URL = BASE_URL + DISCOVER + SORT_ORDER + API_KEY + NUM_PAGES
-const SEARCH_URL = "https://api.themoviedb.org/3/search/movie?api_key=2dba80bdc6afe446e856bcf71a6140ef&query=''"
+const SEARCH_URL = BASE_URL + "search/movie?" + API_KEY + "&query=''"
 
 // Grab DOM elements
 const form = document.getElementById('form')
 const header = document.getElementById('header')
+const main = document.getElementById('main')
 
-// Get initial movies
+// Get all movies
 getMovies(MOVIES_URL)
 
 async function getMovies(url) {
@@ -27,13 +25,11 @@ async function getMovies(url) {
   showMovies(data.results)
 }
 
-// Get a movie
-
+// Get one movie
 async function getMovie(movie_id) {
-  const url = BASE_URL + `movie/${movie_id}?language=en-US` + API_KEY 
+  const url = BASE_URL + `movie/${movie_id}?language=en-US` + API_KEY + APPEND_TO_RES 
   const res = await fetch(url)
   const data = await res.json()
-
   showMovie(data)
 }
 
@@ -55,9 +51,7 @@ form.addEventListener('submit', (e) => {
 function showMovies(movies) {
   main.innerHTML = '';
   movies.forEach((movie) => {
-    const { id, original_title, title, poster_path, vote_average, overview } = movie;
-
-    const movie_url = getMoviePageUrl(original_title, id);
+    const { id, overview, poster_path, title, vote_average } = movie;
 
     let votes_rounded = Math.round(vote_average * 10) / 10;
 
@@ -100,9 +94,21 @@ function getMoviePageUrl(title, movie_id) {
 }
 
 function showMovie(movie) {
+  const { backdrop_path, 
+    genres, 
+    homepage, 
+    overview, 
+    poster_path, 
+    release_date, 
+    release_dates,
+    runtime,
+    title, 
+  } = movie;
+ 
+  // Scroll to top of page, so header and back button
+  // can be seen
+  window.scrollTo(0,0);
 
-  const { title, genres, poster_path, backdrop_path, vote_average, overview } = movie;
-  
   // remove search and replace with 'back' button
   form.remove('form');
   const backButton = document.createElement("a");
@@ -115,28 +121,36 @@ function showMovie(movie) {
     window.location.reload();
   });
 
+  // Convert runtime into hours and mins
+  const hrs = (Math.floor(runtime / 60)).toString() 
+  const mins = (runtime % 60).toString();
+  const hrs_mins = hrs + 'h ' + mins + 'm';
+
   // Get genre names
+  const genre_names = []
   genres.forEach((genre) => {
-    console.log(genre.name) 
+    genre_names.push(genre.name)
   })
 
-  // clear the main div and append movie info
-  main.innerHTML = '';
+  //const cert = release_dates.results[20].release_dates[0].certification
   
-  //let votes_rounded = Math.round(vote_average * 10) / 10;
+  // clear the main div and attach new id 
+  main.innerHTML = '';
+  document.getElementById('main').id = 'single-movie'
 
-  const movieEl = document.createElement('div');
-  movieEl.classList.add('single-movie-info');
-
-  movieEl.innerHTML = `
-    <img src="${IMG_PATH + backdrop_path}" alt="backdrop picture">
-    <img src="${IMG_PATH + poster_path}" alt="${title}">
-
-      <h1>${movie.title}</h1>
-      <p>${genres[0].name}</p>
+  main.innerHTML = `
+    <div class="images">    
+      <img class="backdrop" src="${IMG_PATH + backdrop_path}" alt="backdrop picture">
+      <img class="poster" src="${IMG_PATH + poster_path}" alt="${title}">
+    </div>
+    <div class="movie-details"> 
+      <h1>
+        ${title}
+        <span>15</span>
+      </h1>
+      <span>${release_date} &bull; (GB) &bull; ${genre_names} &bull; ${hrs_mins} </spna>
+      <p>Visit: <a href="${homepage}">${title} Movie</a></p>
       <h3>Overview</h3>
       ${overview}
     </div>`
-
-    main.appendChild(movieEl)
 }
