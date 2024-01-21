@@ -132,8 +132,15 @@ function showMovie(movie) {
     genre_names.push(genre.name)
   })
 
-  //const cert = release_dates.results[20].release_dates[0].certification
-  
+  // Get the GB certification if it exists
+  let cert = ""
+  for (let i = 0; i < release_dates.results.length; i++) {
+    let obj = release_dates.results[i];
+    if (Object.values(obj)[0] === 'GB') {
+      cert = Object.values(obj)[1][0].certification
+    } 
+  }
+
   // clear the main div and attach new id 
   main.innerHTML = '';
   document.getElementById('main').id = 'single-movie'
@@ -146,11 +153,11 @@ function showMovie(movie) {
     <div class="movie-details"> 
       <h1>
         ${title}
-        <span>15</span>
+        <span>${cert}</span>
       </h1>
-      <span>${release_date} &bull; (GB) &bull; ${genre_names} &bull; ${hrs_mins} </spna>
+      <span>${release_date} &bull; ${genre_names} &bull; ${hrs_mins} </span>
       <p>Visit: <a href="${homepage}">${title} Movie</a></p>
       <h3>Overview</h3>
-      ${overview}
+      <p>${overview}</p>
     </div>`
 }
