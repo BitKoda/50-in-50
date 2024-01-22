@@ -17,7 +17,7 @@
 - [x] 15. Incrementing Counter
 - [x] 16. Drink Water
 - [x] 17. Movie App
-- [ ] 18. Background Slider
+- [x] 18. Background Slider
 - [ ] 19. Theme Clock
 - [ ] 20. Button Ripple Effect
 - [ ] 21. Drag N Drop
