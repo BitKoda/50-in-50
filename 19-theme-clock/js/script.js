@@ -60,7 +60,7 @@ function setTime() {
   secondHand.style.transform = `translate(-50%, -100%) rotate(${scale(seconds, 0, 59, 0, 360)}deg)`;
 
   // digital clock
-  timeEl.innerHTML = `${hours}:${minutes}`
+  timeEl.innerHTML = `${hours}:${minutes < 10 ? `0${minutes}` : `${minutes}`}`
   dateEl.innerHTML = `${days[day]}, <span class="circle">${date}</span> ${months[month]} ${year}`
 }
 
