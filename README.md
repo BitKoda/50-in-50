@@ -19,7 +19,7 @@
 - [x] 17. Movie App
 - [x] 18. Background Slider
 - [x] 19. Theme Clock
-- [ ] 20. Button Ripple Effect
+- [x] 20. Button Ripple Effect
 - [ ] 21. Drag N Drop
 - [ ] 22. Drawing App
 - [ ] 23. Kinetic CSS Loader
