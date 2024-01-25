@@ -20,7 +20,7 @@
 - [x] 18. Background Slider
 - [x] 19. Theme Clock
 - [x] 20. Button Ripple Effect
-- [ ] 21. Drag N Drop
+- [x] 21. Drag N Drop
 - [ ] 22. Drawing App
 - [ ] 23. Kinetic CSS Loader
 - [ ] 24. Content Placeholder
