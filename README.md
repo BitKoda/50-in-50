@@ -21,7 +21,7 @@
 - [x] 19. Theme Clock
 - [x] 20. Button Ripple Effect
 - [x] 21. Drag N Drop
-- [ ] 22. Drawing App
+- [x] 22. Drawing App
 - [ ] 23. Kinetic CSS Loader
 - [ ] 24. Content Placeholder
 - [ ] 25. Sticky Navbar
